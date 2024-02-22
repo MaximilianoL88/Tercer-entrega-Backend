@@ -23,9 +23,9 @@ app.get("/products", (req, res)=>{
     res.json(products)
 })
 
-app.get("/products/:id", (req, res)=>{
+app.get("/products/:pid", (req, res)=>{
     const productId=parseInt(req.params.pid)
-    const product= productManager.getProductsByid(1)
+    const product= productManager.getProductsByid(productId)
     
     if (product){
         res.json(product)

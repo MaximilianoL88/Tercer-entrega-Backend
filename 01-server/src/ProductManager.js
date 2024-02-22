@@ -49,7 +49,7 @@ class productManager {
     getProductsByid(id){
         let lecturaProductos=JSON.parse(fs.readFileSync(ruta,{encoding:"utf8"}))
         console.log(`Producto filtrado...:\n\n`,lecturaProductos[id -1]) 
-        return[lecturaProductos[id]]  
+        return[lecturaProductos[id-1]]  
     }  
     //modificamos alguna prop de el objeto elegido por su id y lo grabamos
     /* updateProduct(id){
